@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "6128f056-48b8-40a5-8d1b-97c8836aa814",
+		"name": "userDetails",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createUserDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Rama\",\r\n    \"lastName\":\"Athma\",\r\n    \"email\":\"rama@aexonic.com\",\r\n    \"password\":\"Welce123\",\r\n    \"address\":\"Madai\",\r\n    \"mobileNumber\":\"9780600000\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1/user-details/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"user-details",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"credentials\": \"cmFtYUBhZXhvbmljLmNvbTpXZWxjZTEyMw==\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/api/v1/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUserDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYW1hQGFleG9uaWMuY29tIiwiZXhwIjoxNjQ3MjE5NTgyLCJpYXQiOjE2NDcyMDE1ODJ9.mdGMCNzqF2Eb_eOBICoygWeCqal_VZrVjfsrZG1gEmXMNZ9bfBLwLDmtJTUrFuXP3nK9BPlhdAIGguQkpU72Ew",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/api/v1/user-details/a5a3a87c-adb1-4e6d-9afa-c0d417c55d81",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"user-details",
+						"a5a3a87c-adb1-4e6d-9afa-c0d417c55d81"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserDetails",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Ramalakshmi\",\r\n    \"lastName\":\"Athmanathan\",\r\n    \"email\":\"rama@aexonic.com\",\r\n    \"password\":\"Welce123\",\r\n    \"address\":\"Madurai\",\r\n    \"mobileNumber\":\"9780600000\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/api/v1/user-details/",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"user-details",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUserDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/api/v1/user-details/",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"user-details",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
